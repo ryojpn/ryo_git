@@ -37,7 +37,7 @@ int CountW = 0;
        FaceOfBoard = "w" + FaceOfBoard;
      }
 
-  }else{
+  }else if(GameRecord[i] == 'R'){
       if(i%2==0){
         ReverseNum = FaceOfBoard.find("b");
          if(ReverseNum != string::npos){
@@ -51,6 +51,9 @@ int CountW = 0;
         }
         FaceOfBoard = FaceOfBoard + "w";
       }
+    }else{
+      cout << "不正な入力です";
+      abort();
     }
   }
   
@@ -64,7 +67,7 @@ int CountW = 0;
       CountW += 1;
     }
   }
-  cout << CountB << " " << CountW << endl;
+  cout << "黒=" << CountB << " " <<  "白=" << CountW << endl;
   
 }
 
